@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypertext HTML formatting example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css"/>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <!-- Site styles -->
+    <link rel="stylesheet" href="../assets/css/cernsite-base.css"/>
+    <link rel="stylesheet" href="../assets/css/cernsite-page.css"/>
+</head>
+</head>
+<body>
+    <header>
+    <h1>Markup Samples</h1>
+    <hr class="title-rule"/>
+        <nav aria-label="breadcrumb">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="#">Hypertext HTML formatting example</a></li>
+                <li>Hypertext HTML formatting example</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Test DatasetS</h2>
+            <p>This is an example bit of hypertext - compare the formatted version with the original HTML source.
+       Let's try introducing an initial paragraph between the H1 and the H2 headings. \n
+            </p>
+        <h3>Introduction</h3>
+            <p>This file contains a test set of HTML mark-up, as a test of hypertext
+            browsers and an example of the syntax of the tags. See also:
+            </p>
+            <ul>
+            <li><a name="0" href="#">An arbitrary news article</a>
+            </li><li><a name="1" href="#">The newsgroup on hypertext</a>
+            </li><li><a name="2" href="#">More details about the WWW project.</a>
+            </li>
+            </ul>
+            "That is the end of the list."
+        <h3>Some anchors</h3>
+            <p>Anchors come in two forms: whole nodes or parts of nodes. The line mode browser can't currently (Nov 91) jump to a part of a node: it always jumps to the top.</p>
+        <h4>Leading to whole nodes</h4>
+            <p>Here is an anchor which leads to <a id="#anchor-demo" href="#">the VM FIND command.</a>  
+                Note the nested highlighting (hp2) within the anchor. If you want to click on
+                <a name="4" href="#">this,</a> you will go to the system default page.</p>
+        <h4>Leading to anchors within nodes</h4>
+            <p>Now <a name="5" href="#">THIS</a> leads to anchor #2 in this file, and if you want to click
+            on <a name="6" href="#">THIS,</a> you should go to the system default page with anchor #2 selected.
+            Now the word <a id="#dest1">"destination"</a> is a named destination anchor, connected
+            to the word <a name="7" href="#">"source"</a> . Clicking on the destination shouldn't do anything.
+            Selecting the source should lead to the destination.
+            Now let's go through the limited set of markup tags which we accept.
+            The title, "Hypertext HTML formatting example" was between TITLE tags.
+            "Test Dataset" at the top of this page was a Level One Heading (H1).
+            The quick brown fox jumps over the lazy dog. In Hertford, Hereford
+            and hampshire, hurricanes hardly happen.
+        </p>
+        <h2>Level two heading</h2>Here is some text which follows the heading. The quick brown fox jumps
+            over the lazy dog. In Hertford, Hereford and hampshire, hurricanes
+            hardly happen.
+        <h3>Level 3 heading</h3>
+        Here is some text which follows the heading. The quick brown fox jumps
+        over the lazy dog. In Hertford, Hereford and hampshire, hurricanes
+        hardly happen.
+        <p>This is a test paragraph. It is separated from the previous one by
+            a P paragraph mark.</p>
+        <p>This new paragraph was separated from the previous one by a blank
+            line, a horrible leftover from SCRIPT, which violates the free format
+            of the text.
+        </p>
+        <p>This was delimited in the same way in the source. The blank line should
+        have the same effect as a paragraph mark. We have included in HTML
+        some tags from the SGML tagset used at and once supported at CERN
+        by<a name="8" href="#"> quite a lot of documentation and SGML examples.</a> The HTML parser
+        will ignore tags which it does not understand, and will ignore attributes
+        which it does not understand of CERN-SGML tags. Of course, the HTML
+        parser will not accept any commands in the<a name="9" href="#"> SCRIPT</a> language.</p>
+        <p>Now for an example section, in monospaced font:</p>
+        <p><pre>
+         _-_
+        [o,o]
+         \-/
+
+   <code>This text is laid out using fixed-width characters</code>
+                               -----------
+   It uses the <XMP> and can contain embedded <xmp and > signs. It has
+   tabs every eight columns like good old simple systems we know and love.
+
+12345678123456781234567812345678123456781234567812345678123456781234567812345678
+!	!	!	!	!	!	!	!	!	!	
+Column:	First	Second	Third	Fourth	Fifth	Sixth	Seventh	Eighth	Ninth
+Index:	1	2	3	4	5	6	7	8	9
+Junk:	The	Quick	brown	fox	jumps	over	the	lazy	dog.</xmp></pre></p>
+
+    <p>After the example text, we revert to the default again.</p>
+    <h3>Glossary</h3>
+    Now lets us try out a glossary. A glossary has a large hanging indent aligned with a first tab stop.
+    <dl>
+    <dt>Glossary
+    </dt>
+    <dd> A list of definitions of terms. Each term is given in a left-hand
+    column, with a longer textual definition being given in a right-hand
+    column.
+    </dd>
+    <dt>Term</dt>
+    <dd> A word or phrase being defined.</dd>
+    <dt>Definition</dt>
+    <dd> A sentences or sentences which define the term. the definition
+        can wrap around in the second column, but the term can't wrap around
+        in the second column.</dd>
+    </dl>
+And after that dazzling display of formatting, how about  an unordered
+list:
+    <ul>
+    <li>This is the first element of an unordered list</li>
+    <li>This is the 2nd element of an unordered list</li>
+    <li>This is the 3rd element of an unordered list</li>
+    <li>This is the 4th element of an unordered list</li>
+    </ul>
+Now let's try a "MENU" section. It's the same as a list but intended for single-line sized entities, not too spaced out. It could be a browser panel.
+    <menu>
+        <li>This is the 2nd element of a menu</li>
+        <li>This is the first element of a menu</li>
+        <li>This is the 4th element of a menu</li>
+        <li>This is the 3rd element of a menu</li>
+    </menu>
+    Now let's try a "DIR" section. It's the same, but elements are expected to be smaller and to be arranged in columns.
+    <dir>
+    <li>First element of directory</li>
+    <li>This is the 2nd element</li>
+    <li>Third</li>
+    <li>fouth</li>
+    <li>fifth</li>
+    <li>sixth element of a directory</li>
+    <li>This is the 7th element of directory</li>
+    </dir>
+    Now let's try a "LISTING" section. The tabs should be every 8 spaces.
+    <listing>
+    123456781234567812345678123456781234567812345678123456781234567812345678123456781234567
+    !	!	!	!	!	!	!	!	!	!	!
+    Column:	First	Second	Third	Fourth	Fifth	Sixth	Seventh	Eighth	Ninth	Tenth
+    Index:	1	2	3	4	5	6	7	8	9	10
+    Junk:	The	Quick	borwn	fox	jumps	over	the	lazy	dog	again!
+
+    </listing>
+    <p>This is the end of the test file.</p>
+
+    </main>   
+</body>
+</html>
+
+
+

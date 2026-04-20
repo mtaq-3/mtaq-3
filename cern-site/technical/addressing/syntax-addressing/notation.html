@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notation -- /WWW</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css"/>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <!-- Site styles -->
+    <link rel="stylesheet" href="../assets/css/cernsite-base.css"/>
+    <link rel="stylesheet" href="../assets/css/cernsite-page.css"/>
+    <style> #main1 {
+ 				font-size: medium;
+  				
+			}
+</style>
+</head>
+<body>
+    <header>
+    <h1>Notation</h1>
+    <hr class="title-rule"/>
+        <nav aria-label="breadcrumb">
+            <ul><li><a href="../../../index.html">Home</a></li>
+                <li><a href="#">Syntax Addressing</a></li>
+                <li>notations</li>
+            </ul>
+        </nav>
+    </header>
+
+<main id="main1">
+
+<h1>Notation</h1>
+
+<p>This section covers the notational conventions used in WWW specifications, specifically an augmented Backus–Naur Form (BNF). It is divided into three parts: standard RFC 822 conventions, specific changes for WWW, and general rules used across the project.</p>
+
+<h2>Notational Conventions (BNF)</h2>
+
+<ol>
+  <li>
+    <strong>Rule Naming</strong>
+    <ul>
+      <li>Rule names are written plainly, such as <code>RuleName</code>.</li>
+      <li>Literal text is enclosed in quotation marks.</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Alternatives</strong>
+    <ul>
+      <li>Elements separated by <code>|</code> represent alternatives, e.g. <code>foo | bar</code>.</li>
+      <li>The vertical bar is used instead of <code>/</code> because slashes appear frequently in directory paths.</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Repetition</strong>
+    <ul>
+      <li><code>*</code> indicates repetition.</li>
+      <li><code>&lt;l&gt;*&lt;m&gt;element</code> means at least <em>l</em> and at most <em>m</em> occurrences.</li>
+      <li><code>1*element</code> requires at least one occurrence.</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Specific Repetition</strong>
+    <ul>
+      <li>Exactly <em>n</em> occurrences are written as <code>&lt;n&gt;(element)</code>.</li>
+      <li>Example: <code>2DIGIT</code> is a two‑digit number.</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Lists</strong>
+    <ul>
+      <li>The <code>#</code> construct indicates a comma‑separated list.</li>
+      <li><code>1#element</code> requires at least one non‑null element.</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Comments</strong>
+    <ul>
+      <li>A semicolon <code>;</code> begins a comment that continues to the end of the line.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>Changes and Additions for WWW</h2>
+
+<ul>
+  <li>Non‑terminals are written in PascalCase, e.g. <code>NonTerminalName</code>.</li>
+  <li>A rule is written as <code>NonTerminal ::= RuleDefinition</code>.</li>
+  <li>C‑style escape sequences are used for layout characters:
+    <ul>
+      <li><code>\n</code> (newline)</li>
+      <li><code>\r</code> (carriage return)</li>
+      <li><code>\t</code> (tab)</li>
+      <li><code>\b</code> (backspace)</li>
+      <li><code>\f</code> (form feed)</li>
+    </ul>
+  </li>
+  <li>Angle brackets are avoided to prevent conflict with SGML/HTML tags.</li>
+</ul>
+
+<h2>General Rules</h2>
+
+<ul>
+  <li>HTTP data is written in line format, meaning <code>\r\n</code> line breaks are significant.</li>
+  <li>Strings are sequences of ASCII characters surrounded by double quotes.</li>
+  <li>Double quotes inside strings must be escaped as <code>\"</code>.</li>
+</ul>
+
+<address><a href="../../../about/people/people.html#cailliau">RC</a></address>
+</main>
+</body>
+</html>
